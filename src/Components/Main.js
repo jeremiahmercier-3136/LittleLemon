@@ -1,18 +1,21 @@
 import React, { useReducer, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import AboutPage from './AboutPage';
 import BookingPage from './BookingPage';
+import ConfirmedBooking from './ConfirmedBooking';
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import MenuPage from './MenuPage';
 import OrderPage from './OrderPage';
+import { fetchAPI, submitAPI } from '../api';
 
 function initializeTimes() {
-  return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+  const today = new Date();
+  return fetchAPI(today);
 }
 
 function updateTimes(state, selectedDate) {
-  return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+  return  fetchAPI(new Date(selectedDate));
 }
 
 function Main() {
@@ -22,6 +25,15 @@ function Main() {
   const [occasion, setOccasion] = useState('');
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
+  const navigate = useNavigate();
+
+  const submitForm = (formData) => {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate('/confirmed');
+    }
+  };
+
   return (
     <main>
       <Routes> 
@@ -30,7 +42,7 @@ function Main() {
         <Route path="/booking" element={
           <BookingPage
             date={date}
-            setDate={setDate}
+            setDate={d => {setDate(d); dispatch(d);}}
             time={time}
             setTime={setTime}
             guests={guests}
@@ -38,11 +50,13 @@ function Main() {
             occasion={occasion}
             setOccasion={setOccasion}
             availableTimes={availableTimes}
+            submitForm={submitForm}
           />}>
         </Route>
-        <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/menu" element={<MenuPage />}></Route>
-        <Route path="/order" element={<OrderPage />}></Route>
+        <Route path="/confirmed" element={<ConfirmedBooking />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/menu" element={<MenuPage />}></Route>
+        <Route path="/order" element={<OrderPage />}></Route>
       </Routes>
     </main>
   );

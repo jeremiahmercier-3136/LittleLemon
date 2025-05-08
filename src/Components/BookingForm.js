@@ -1,10 +1,11 @@
 import React from 'react';
 
-function BookingForm({date, setDate, time, setTime, guests, setGuests, occasion, setOccasion, availableTimes}) {
+function BookingForm({date, setDate, time, setTime, guests, setGuests, occasion, setOccasion, availableTimes, submitForm}) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ date, time, guests, occasion });
-    // Handle form submission logic here
+    const formData = { date, time, guests, occasion };
+    console.log(formData);
+    submitForm(formData);
   };
 
   return (
