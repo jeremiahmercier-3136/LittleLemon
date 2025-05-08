@@ -7,7 +7,93 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  width: 100%;
+  max-width: 1200px; /* or whatever 12 columns wide is for you */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-left: 16.6667%;  /* 2 of 12 columns = 2/12 = 16.6667% */
+    padding-right: 16.6667%;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  gap: 2rem;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  flex: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* ✅ evenly spread */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+footer img {
+  height: 80px;
+  width: auto;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* ⬅️ stack top to bottom */
+  gap: 0.5rem;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+footer nav a:hover {
+  color: #007bff;
 }
