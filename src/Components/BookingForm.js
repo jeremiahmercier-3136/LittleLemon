@@ -48,7 +48,7 @@ function BookingForm({date, setDate, time, setTime, guests, setGuests, occasion,
         <option>Anniversary</option>
       </select>
 
-      <input type="submit" value="Make Your Reservation" />
+      <input type="submit" value="Make Your Reservation" aria-label="On Click" />
     </form>
   );
 }
