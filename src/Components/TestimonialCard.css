@@ -1,0 +1,26 @@
+.testimonial-card {
+    background-color: #edefee;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    max-width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-rating {
+    font-size: 1rem;
+    color: #f4ce14;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-review {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .testimonial-name {
+    font-weight: bold;
+    color: #495e57;
+  }
+  

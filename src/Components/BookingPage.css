@@ -1,0 +1,46 @@
+.booking-form {
+    display: grid;
+    max-width: 600px; /* Matches the about page width */
+    width: 100%; /* Ensures the form is not wider than the container */
+    gap: 8px; /* Reduced gap between label and field */
+    padding: 40px;
+    background-color: #EDEFEE; /* Pale white highlight */
+    font-family: 'Karla', sans-serif;
+    font-size: 16pt;
+    color: #333333; /* Charcoal */
+    margin: 0 auto; /* Centers the form */
+  }
+  
+  .form-label {
+    font-weight: bold;
+    font-size: 16pt;
+    color: #333333;
+    margin-bottom: 4px; /* Reduced margin */
+  }
+  
+  .form-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16pt;
+    font-family: 'Karla', sans-serif;
+  }
+  
+  .form-submit {
+    background-color: #F4CE14; /* Yellow */
+    color: #495E57; /* Green */
+    padding: 14px 24px;
+    font-size: 16pt;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    width: auto; /* Button width matches the text width */
+    align-self: center; /* Centers the button */
+  }
+  
+  .form-submit:hover {
+    background-color: #e1bc12;
+  }
+  

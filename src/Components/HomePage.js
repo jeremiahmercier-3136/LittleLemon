@@ -1,15 +1,15 @@
 import React from 'react';
 import ChicagoStore from './ChicagoStore';
 import Hero from './Hero';
-import Specials from './Specials';
-import Testimonials from './Testimonials';
+import SpecialsSection from './SpecialsSection';
+import TestimonialsSection from './TestimonialsSection';
 
 function HomePage() {
   return (
     <>
       <Hero />
-      <Specials />
-      <Testimonials />
+      <SpecialsSection />
+      <TestimonialsSection />
       <ChicagoStore />
     </>
   );

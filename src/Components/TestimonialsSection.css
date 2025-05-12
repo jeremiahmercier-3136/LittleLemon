@@ -1,0 +1,19 @@
+.testimonials-section {
+    padding: 60px 80px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #495e57;
+  }
+  
+  .testimonial-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  

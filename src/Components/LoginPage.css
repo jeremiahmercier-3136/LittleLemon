@@ -1,0 +1,53 @@
+.login-page {
+    padding: 20px;
+    background-color: #EDEFEE;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-family: 'Markazi Text', serif;
+    font-size: 40pt;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .login-form {
+    margin-bottom: 2rem;
+  }
+  
+  .form-label {
+    font-family: 'Karla', sans-serif;
+    font-size: 16pt;
+    color: #495E57;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    font-family: 'Karla', sans-serif;
+    font-size: 16pt;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #495E57;
+    border-radius: 8px;
+  }
+  
+  .login-button {
+    font-family: 'Karla', sans-serif;
+    font-size: 16pt;
+    padding: 10px;
+    background-color: #F4CE14;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #495E57;
+  }
+  

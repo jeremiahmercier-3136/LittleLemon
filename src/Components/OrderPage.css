@@ -1,0 +1,29 @@
+.order-page {
+    padding: 20px;
+    background-color: #EDEFEE;
+    text-align: center;
+  }
+  
+  .order-title {
+    font-family: 'Markazi Text', serif;
+    font-size: 40pt;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .order-description {
+    font-family: 'Karla', sans-serif;
+    font-size: 16pt;
+    color: #495E57;
+    margin-bottom: 2rem;
+  }
+  
+  .order-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  

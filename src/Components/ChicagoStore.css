@@ -1,0 +1,25 @@
+.chicago-store {
+    background-color: #edefee;
+    padding: 60px 80px;
+    color: #495e57;
+    text-align: left;
+  }
+  
+  .store-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .store-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .store-address {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
