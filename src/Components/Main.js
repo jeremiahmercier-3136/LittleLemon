@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import AboutPage from './AboutPage';
 import BookingPage from './BookingPage';
@@ -15,14 +15,10 @@ function initializeTimes() {
 }
 
 function updateTimes(state, selectedDate) {
-  return  fetchAPI(new Date(selectedDate));
+  return fetchAPI(new Date(selectedDate));
 }
 
 function Main() {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(2);
-  const [occasion, setOccasion] = useState('');
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
   const navigate = useNavigate();
@@ -41,15 +37,8 @@ function Main() {
         <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/booking" element={
           <BookingPage
-            date={date}
-            setDate={d => {setDate(d); dispatch(d);}}
-            time={time}
-            setTime={setTime}
-            guests={guests}
-            setGuests={setGuests}
-            occasion={occasion}
-            setOccasion={setOccasion}
             availableTimes={availableTimes}
+            dispatch={dispatch}
             submitForm={submitForm}
           />}>
         </Route>

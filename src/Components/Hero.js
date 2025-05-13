@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -10,11 +11,13 @@ function Hero() {
           We are a family-owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button className="reserve-button">Reserve a Table</button>
+        <Link to="/booking">
+          <button className="reserve-button">Reserve a Table</button>
+        </Link>
       </div>
       <div className="hero-right">
         <img
-          src="/images/restaurant-food.jpg" // Replace with the actual image path
+          src="/images/restaurant-food.jpg"
           alt="Restaurant"
           className="hero-image"
         />
